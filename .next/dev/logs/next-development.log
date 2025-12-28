@@ -1,0 +1,29 @@
+[00:00:01.418] Server  LOG     ✓ Ready in 914ms
+[00:00:17.823] Server  WARN    ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:00:18.422] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.655] Browser WARN    Image with src "https://media.licdn.com/dms/image/v2/D4D03AQGticKIGE-zRQ/profile-displayphoto-scale_200_200/B4DZtlP08aHQAc-/0/1766930215469?e=1768435200&v=beta&t=Lb9hSZzkWvMtV6ec8OTeVZljpqKEtUvVSdXOn5OC4iM" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:03:51.064] Server  LOG     ✓ Compiled in 1436ms
+[00:03:51.909] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:03:51.909] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:03:51.909] Browser ERROR   uncaughtError: Error: Failed to parse src "public/projects/safety-app.png" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:03:53.036] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:53.042] Server  LOG     ✓ Compiled in 139ms
+[00:03:53.209] Server  WARN    ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:03:53.759] Server  WARN    ⚠ Unsupported metadata viewport is configured in metadata export in /_not-found. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:03:53.901] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/projects/safety-app.png" "received" null
+[00:03:54.085] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:54.874] Browser WARN    Image with src "https://media.licdn.com/dms/image/v2/D4D03AQGticKIGE-zRQ/profile-displayphoto-scale_200_200/B4DZtlP08aHQAc-/0/1766930215469?e=1768435200&v=beta&t=Lb9hSZzkWvMtV6ec8OTeVZljpqKEtUvVSdXOn5OC4iM" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:04:00.303] Server  LOG     ✓ Compiled in 70ms
+[00:04:00.873] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:04:00.873] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:04:00.874] Browser ERROR   uncaughtError: Error: Failed to parse src "public/projects/safety-app.png" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:04:20.389] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:20.472] Server  WARN    ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:04:20.568] Server  LOG     ✓ Compiled in 69ms
+[00:04:20.733] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:21.872] Browser WARN    Image with src "https://media.licdn.com/dms/image/v2/D4D03AQGticKIGE-zRQ/profile-displayphoto-scale_200_200/B4DZtlP08aHQAc-/0/1766930215469?e=1768435200&v=beta&t=Lb9hSZzkWvMtV6ec8OTeVZljpqKEtUvVSdXOn5OC4iM" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:27.508] Server  LOG     ✓ Compiled in 74ms
