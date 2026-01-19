@@ -63,7 +63,116 @@ body {
   background: linear-gradient(180deg, #2563eb, #7c3aed);
 }
 
-/* Custom Animations */
+/* ========================================== */
+/* 📱 MOBILE ORDER FIX - NEW                 */
+/* Makes About appear before Design on mobile */
+/* ========================================== */
+
+@media (max-width: 1023px) {
+  header {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Profile section (first div) appears first */
+  header > div:first-child {
+    order: 1;
+  }
+  
+  /* Design section (last div) appears last */  
+  header > div:last-child {
+    order: 2;
+  }
+}
+
+/* ========================================== */
+/* 🎬 SCROLL REVEAL ANIMATIONS - NEW         */
+/* Elements animate into view as you scroll  */
+/* ========================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll animation utility classes */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-left {
+  opacity: 0;
+}
+
+.animate-left.visible {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-right {
+  opacity: 0;
+}
+
+.animate-right.visible {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-scale {
+  opacity: 0;
+}
+
+.animate-scale.visible {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Stagger delays for sequential animations */
+.delay-0 { animation-delay: 0s !important; }
+.delay-100 { animation-delay: 0.1s !important; }
+.delay-200 { animation-delay: 0.2s !important; }
+.delay-300 { animation-delay: 0.3s !important; }
+.delay-400 { animation-delay: 0.4s !important; }
+.delay-500 { animation-delay: 0.5s !important; }
+.delay-600 { animation-delay: 0.6s !important; }
+.delay-700 { animation-delay: 0.7s !important; }
+.delay-800 { animation-delay: 0.8s !important; }
+.delay-900 { animation-delay: 0.9s !important; }
+.delay-1000 { animation-delay: 1s !important; }
+
+/* ========================================== */
+/* EXISTING ANIMATIONS                        */
+/* ========================================== */
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) translateX(0px);
@@ -141,7 +250,84 @@ body {
   }
 }
 
-/* Utility Classes */
+/* Profile Image Animations */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(2rem) translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-0.5rem) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+/* Enhanced 3D and Professional Animations */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Smooth 3D card transform */
+@keyframes card3DFloat {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  }
+}
+
+/* Gradient border animation */
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 200% center;
+  }
+  50% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ========================================== */
+/* UTILITY CLASSES                            */
+/* ========================================== */
+
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -185,6 +371,10 @@ body {
   animation: scale-in 0.4s ease-out;
 }
 
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
 /* Smooth transitions */
 .transition-smooth {
   transition: var(--transition-smooth);
@@ -204,6 +394,32 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Perspective for 3D effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Enhanced hover lift effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) translateZ(20px);
+}
+
+/* Glass morphism enhancement */
+.glass-enhanced {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Gradient Backgrounds */
 .bg-gradient-blue {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -219,55 +435,6 @@ body {
 
 .bg-gradient-sunset {
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-}
-
-/* Improved focus states for accessibility */
-*:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Better button states */
-button:active {
-  transform: scale(0.98);
-}
-
-/* Smooth image loading */
-img {
-  transition: opacity 0.3s ease;
-}
-
-img[loading] {
-  opacity: 0;
-}
-
-img:not([loading]) {
-  opacity: 1;
-}
-
-/* Text shimmer effect */
-.text-shimmer {
-  background: linear-gradient(
-    90deg,
-    #1e293b 0%,
-    #3b82f6 50%,
-    #1e293b 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% {
-    background-position: 200% center;
-  }
-  50% {
-    background-position: 0% center;
-  }
 }
 
 /* Frosted glass effect */
@@ -304,19 +471,112 @@ img:not([loading]) {
   animation: loading 1.5s ease-in-out infinite;
 }
 
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
+/* Text shimmer effect */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1e293b 0%,
+    #3b82f6 50%,
+    #1e293b 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
 }
+
+/* Ensure full-width cards */
+.full-width-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ========================================== */
+/* TYPOGRAPHY & SPACING                       */
+/* ========================================== */
+
+/* Improved Typography and Paragraph Spacing */
+p {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p + p {
+  margin-top: 1.25rem;
+}
+
+/* Better text readability */
+.text-content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Enhanced list spacing */
+ul, ol {
+  line-height: 1.8;
+}
+
+li + li {
+  margin-top: 0.75rem;
+}
+
+/* Professional section spacing */
+.section-spacing {
+  margin-bottom: 8rem;
+}
+
+/* ========================================== */
+/* ACCESSIBILITY & STATES                     */
+/* ========================================== */
+
+/* Improved focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Better button states */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+img:not([loading]) {
+  opacity: 1;
+}
+
+/* ========================================== */
+/* RESPONSIVE DESIGN                          */
+/* ========================================== */
 
 /* Responsive typography */
 @media (max-width: 640px) {
   html {
     font-size: 14px;
+  }
+  
+  /* Better mobile paragraph formatting */
+  p {
+    text-align: left;
+    line-height: 1.7;
+  }
+  
+  .section-spacing {
+    margin-bottom: 4rem;
   }
 }
 
@@ -324,15 +584,31 @@ img:not([loading]) {
   html {
     font-size: 15px;
   }
+  
+  .section-spacing {
+    margin-bottom: 6rem;
+  }
 }
 
 @media (min-width: 1025px) {
   html {
     font-size: 16px;
   }
+  
+  /* Responsive container improvements */
+  .content-section {
+    width: 100%;
+  }
+  
+  .project-card-image {
+    min-height: 28rem;
+  }
 }
 
-/* Print styles */
+/* ========================================== */
+/* PRINT STYLES                               */
+/* ========================================== */
+
 @media print {
   * {
     background: white !important;
